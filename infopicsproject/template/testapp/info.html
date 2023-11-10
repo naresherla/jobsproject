@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/demo.css'%}">
+</head>
+<body>
+<h1>{{head_msg}}</h1>
+    <ul>
+        <li>{{msg1}}</li>
+        <li>{{msg2}}</li>
+        <li>{{msg2}}</li>
+    </ul>
+{% if type == 'sports' %}
+<img src="{% static 'images/s.jpg'%}">
+<img src="{% static 'images/s1.jpg' %}">
+<img src="{% static 'images/s2.jpg' %}">
+{% elif type == 'politics' %}
+<img src="{% static 'images/p.jpg' %}">
+<img src="{% static 'images/p1.jpg' %}">
+<img src="{% static 'images/p2.jpg' %}">
+{% elif type == 'systems' %}
+<img src="{% static 'images/sys.jpg' %}">
+<img src="{% static 'images/sys1.jpg' %}">
+<img src="{% static 'images/sys2.jpg' %}">
+{% endif %}
+</body>
+</html>
